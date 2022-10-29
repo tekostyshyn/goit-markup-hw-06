@@ -102,10 +102,29 @@
                   <use href="./images/icons.svg#icon-email"></use>
                 </svg>
               </div>
-              <label for="user-comment" class="callback-label">Пошта</label>
-              <div class="callback-wrapper">
-                <input type="text-area" id="user-comment" name="user-comment" class="callback-input" />
-                </svg>
+              <label for="user-comment" class="callback-label">Коментар</label>
+              <textarea
+                name="user-comment"
+                id="user-comment"
+                class="comment-field"
+                placeholder="Введіть текст"
+              ></textarea>
+              <div class="checkbox-wrapper">
+                <label for="contract-terms" class="terms-label">
+                  <input
+                    type="checkbox"
+                    name="contract-terms"
+                    id="contract-terms"
+                    class="terms-checkbox visually-hidden"
+                  />
+                  <svg class="terms-icon">
+                    <use href="./images/icons.svg#icon-check"></use>
+                  </svg>
+                  Погоджуюся з розсилкою та приймаю
+                  <a href="#" class="link">Умови договору</a></label
+                >
+              </div>
+              <button type="submit" class="callback-button button">Відправити</button>
             </form>
           </div>
         </div>

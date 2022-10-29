@@ -13,6 +13,8 @@
   --subscribe-text-color: rgba(255, 255, 255, 0.6);
   --subscribe-border-color: rgba(255, 255, 255, 0.3);
   --modal-border-color: rgba(33, 33, 33, 0.2);
+  --placeholder-color: rgba(117, 117, 117, 0.5);
+  --button-accent-color: #188ce8;
 }
 
 /* general */
@@ -334,6 +336,7 @@ img {
 }
 
 .callback-label {
+  margin-bottom: 4px;
   color: var(--secondary-color);
 
   font-size: 12px;
@@ -343,7 +346,6 @@ img {
 
 .callback-wrapper {
   position: relative;
-  margin-top: 4px;
   margin-bottom: 10px;
 }
 
@@ -355,6 +357,8 @@ img {
   border-radius: 4px;
   outline: 0;
   fill: var(--primary-color);
+
+  font-size: 12px;
 
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -376,6 +380,92 @@ img {
 
 .callback-input:focus + .callback-input-icon {
   fill: var(--accent-color);
+}
+
+.comment-field {
+  width: 448px;
+  height: 120px;
+  padding: 12px 16px;
+  border: 1px solid var(--modal-border-color);
+  border-radius: 4px;
+  outline: 0;
+  resize: none;
+
+  font-size: 12px;
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.comment-field::placeholder {
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: var(--placeholder-color);
+}
+
+.comment-field:focus {
+  border-color: var(--accent-color);
+}
+
+.checkbox-wrapper {
+  margin-top: 20px;
+  padding-left: 13px;
+}
+
+.terms-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  color: var(--secondary-color);
+}
+
+.terms-label .link {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+.terms-icon {
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--primary-color);
+  border-radius: 2px;
+}
+
+.terms-checkbox:checked + .terms-icon {
+  background-color: var(--accent-color);
+  border: 0px;
+}
+
+.callback-button {
+  width: 200px;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  border: 0;
+  border-radius: 4px;
+
+  font-weight: 700;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  text-align: center;
+
+  color: var(--primary-white-color);
+  background-color: var(--accent-color);
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.callback-button:hover,
+.callback-button:focus {
+  background-color: var(--button-accent-color);
 }
 
 /* section features */
