@@ -409,12 +409,12 @@ img {
 
 .checkbox-wrapper {
   margin-top: 20px;
-  padding-left: 13px;
 }
 
 .terms-label {
-  display: inline-flex;
+  display: flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
 
   font-size: 14px;
@@ -442,8 +442,7 @@ img {
 }
 
 .terms-checkbox:focus + .terms-icon {
-  background-color: var(--accent-color);
-  border: 0px;
+  border-color: var(--accent-color);
 }
 
 .callback-button {
@@ -705,7 +704,10 @@ img {
 .footer .container {
   display: flex;
   align-items: baseline;
-  justify-content: space-between;
+}
+
+.address-box {
+  flex-grow: 1;
 }
 
 /* footer logo */
